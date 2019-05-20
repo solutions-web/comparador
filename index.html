@@ -23,19 +23,20 @@
     * {
       outline: none;
    }
-/*COMPARADOR INICIO*/
+
+/******************
+  COMPARADOR INICIO
+*******************/
     .comparador {
       font-family: "Roboto", sans-serif;
       font-weight: 300;
     }
-
-    .titulo-comparador h2 {
+    .titulo-comparador h1, h2, h3, h5 {
       text-transform: uppercase;
       font-family: "Roboto Slab", serif;
       font-weight: 400;
     }
     .titulo-comparador h4 {
-      font-family: "Roboto Slab", serif;
       font-weight: 300;
     }
 
@@ -59,6 +60,33 @@
       border-radius: 4px;
       padding-top: 2rem;
       padding-bottom: 2rem;
+    }
+    /*hover cards cor borda*/
+    #opcao1 .row:hover {
+      border-color: #2288ff;
+    }
+    #opcao2 .row:hover {
+      border-color:  #ff8844;
+    }
+    #opcao3 .row:hover {
+      border-color:  #009966;
+    }
+    /*botão fechar*/
+    .btn-close {
+      display: none;
+      position: absolute;
+      top:20px;
+      right: 10px;
+      background: url("close.png") no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      height: 25px;
+      width: 25px;
+      border: none;
+    }
+    .dismiss .btn-close {
+      display: block;
+
     }
 /*NUMERO DA OPÇÃO*/
   .card-numero {
@@ -112,20 +140,20 @@
        border-radius: 10px;
     }
     #opcao2 .card-imagem a::after {
+      /* display: block; */
        content:"";
        background:  #ff8844;
        width: 90%;
        height: 8px;
-       display: block;
        margin: 2rem auto;
        border-radius: 10px;
     }
     #opcao3 .card-imagem a::after {
+      /* display: block; */
        content:"";
        background: #009966;
        width: 90%;
        height: 8px;
-       display: block;
        margin: 2rem auto;
        border-radius: 10px;
     }
@@ -315,8 +343,9 @@
 
     <section class="carros">
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="card-carro col-md-4 col-sm-12" id="opcao1">
+            <button class="btn-close"></button>
             <div class="row">
               <div class="card-numero" id="numero1">1</div>
               <div class="arrow-right" style=""></div>
@@ -363,7 +392,7 @@
             </div>
           </div>
 
-          <div class="card-carro col-md-4">
+          <div class="card-carro col-md-4" id="opcao2">
             <div class="row">
               <div class="card-numero" id="numero2">2</div>
               <div class="card-nome col-md-12">
@@ -376,7 +405,7 @@
             </div>
           </div>
 
-          <div class="card-carro col-md-4">
+          <div class="card-carro col-md-4" id="opcao3">
             <div class="row">
               <div class="card-numero" id="numero3">3</div>
               <div class="card-nome col-md-12">
@@ -511,5 +540,11 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(".card-carro").hover(function(){
+        $(".card-carro").removeClass("dismiss");
+        $(this).addClass("dismiss");
+      });
+    </script>
   </body>
 </html>
