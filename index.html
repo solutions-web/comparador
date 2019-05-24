@@ -184,7 +184,7 @@
 /*NOTA DOS USUARIOS*/
    .card-nota .nota {
      padding: 1rem;
-     background-color: #666;
+     background-color: #444;
      color: #eee;
      font-weight: 700;
      border-radius: 50%;
@@ -277,7 +277,7 @@
     .tabela #dados {
     }
     .tabela #dados #topo-tabela {
-      background-color: #555;
+      background-color: #222;
       color: #fff;
 
     }
@@ -369,7 +369,7 @@
                 <p class="preco">R$ 99.000</p>
               </div>
               <div class="card-nota col-md-12">
-                <p>
+                <p class="notas">
                     <span class="nota">8.5</span>
                     <span class="">NOTA DOS USUÁRIOS</span>
                 </p>
@@ -400,7 +400,7 @@
                 <p class="nome">UM CARRO</p>
               </div>
               <div class="card-imagem col-md-12">
-                <a href="#" style="display:block"><img src="comparativo-carro-placeholder.jpeg" alt=""></a>
+                <a href="#" style="display:block"><img src="https://via.placeholder.com/350x250" alt=""></a>
               </div>
             </div>
           </div>
@@ -413,7 +413,7 @@
                 <p class="nome">UM CARRO</p>
               </div>
               <div class="card-imagem col-md-12">
-                <a href="#" style="display:block"><img src="comparativo-carro-placeholder.jpeg" alt=""></a>
+                <a href="#" style="display:block"><img src="https://via.placeholder.com/350x250" alt=""></a>
               </div>
           </div>
         </div>
@@ -545,6 +545,10 @@
         $(".card-carro").removeClass("dismiss");
         $(this).addClass("dismiss");
       });
+      // $(".card-nota").hover(function(){
+      //   $(".notas").hide();
+      //   $(".nota-range").show();
+      // });
     </script>
   </body>
 </html>
