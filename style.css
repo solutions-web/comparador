@@ -1,0 +1,462 @@
+
+/*FONTS*/
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+
+
+/*RESETES*/
+    * {
+      outline: none;
+   }
+
+
+/******************
+  COMPARADOR INICIO
+*******************/
+    .comparador {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+    }
+    .comparador a {
+      text-decoration: none;
+    }
+    .titulo-comparador h1, h2, h3, h5 {
+      text-transform: uppercase;
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+    }
+    .titulo-comparador h4 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #444;
+    }
+    /* comparador list box padrão*/
+    .comparador .box {
+      display: block;
+      background: url("icon-arrow2.svg") no-repeat;
+      background-size: contain;
+      background-position: right;
+      background-color: #fff;
+      border: 1px solid #222;
+      border-radius: 4px;
+      border-color: #ccc;
+      width: 100%;
+      height: 30px;
+      text-align: left;
+      padding: 5px;
+      color: #222;
+    }
+
+    .comparador .lista {
+      z-index: 9999;
+      background-color: #fafafa;
+      border-radius: 4px;
+      text-align: left;
+      width: 90%;
+      position: absolute;
+      margin-left: 0;
+      padding: 10px;
+      display: none;
+    }
+    .comparador .lista-item a {
+      display: block;
+      color: #222;
+    }
+    .comparador .lista-item a:hover {
+      background-color: #ddd;
+    }
+    .comparador .grupo-lista {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      color: #111;
+    }
+
+/*SEÇÃO DE CARROS*/
+    .carros {
+    }
+/*CARDS DE CARROS */
+    @media (max-width: 768px) {
+      .card-carro {
+        padding: 0 !important;
+        margin: 4rem 0;
+      }
+      .card-carro .row {
+      }
+    }
+    .card-carro {
+      padding: 3rem;
+    }
+    .card-carro .row { /*border*/
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    /*hover cards cor borda*/
+    #opcao1 .row:hover {
+      border-color: #2288ff;
+    }
+    #opcao2 .row:hover {
+      border-color:  #ff8844;
+    }
+    #opcao3 .row:hover {
+      border-color:  #009966;
+    }
+    /*botão fechar*/
+    .btn-close {
+      display: none;
+      position: absolute;
+      top:20px;
+      right: 10px;
+      background: url("close.png") no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      height: 25px;
+      width: 25px;
+      border: none;
+    }
+    .dismiss .btn-close {
+      display: block;
+
+    }
+/*NUMERO DA OPÇÃO*/
+  .card-numero {
+    position: absolute;
+    top: 55;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 38px;
+    z-index: 999;
+    color: #fff;
+ }
+ #numero1 {
+    background-color: #2288ff;
+  }
+  #numero2 {
+    background-color: #ff8844;
+  }
+  #numero3 {
+    background-color: #009966;
+  }
+/*NOME DO CARRO E marca*/
+    .card-nome {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .card-nome .marca {
+    }
+    .card-nome .nome {
+      font-weight: 500;
+    }
+/*IMAGEM DO CARRO*/
+    .card-imagem {
+      padding: 0;
+      text-align: center;
+    }
+    .card-imagem img {
+      height: 250px;
+      width: auto;
+    }
+/*BORDA CORES EM OPÇOES*/
+    .carro-selecionado-imagem::after {
+       content:"";
+       width: 90%;
+       height: 8px;
+       display: block;
+       margin: 2rem auto;
+       border-radius: 10px;
+    }
+    #opcao1 .carro-selecionado-imagem::after {
+      background: #2288ff;
+    }
+    #opcao2  .carro-selecionado-imagem::after {
+       background:  #ff8844;
+    }
+     #opcao3 .carro-selecionado-imagem::after {
+       background: #009966;
+    }
+/*CARRO MODELO VERSAO*/
+   .card-versao .versao {
+     outline: none;
+     font-family: "Roboto Slab", serif;
+   }
+   .card-versao .versao a {
+     color: #222;
+   }
+   #versao-box {
+
+   }
+    #versao-lista {
+
+    }
+
+/*PRECO CARRO*/
+    .card-preco {
+      padding: 2rem 4rem;
+      text-align: left;
+    }
+    .card-preco .preco {
+      font-family: "Roboto Slab", serif;
+      font-weight: 300;
+      font-size: 28px;
+    }
+/*NOTA DOS USUARIOS*/
+   .card-nota .nota {
+     padding: 1rem;
+     background-color: #444;
+     color: #eee;
+     font-weight: 700;
+     border-radius: 50%;
+     height: 40px;
+     width: 40px;
+     text-align: center;
+     margin-right: 1rem;
+   }
+/*ESCOLHE NOTA*/
+   .card-nota .nota-range {
+     display: none;
+     text-align: left;
+   }
+   .card-nota .range-nota ul, li {
+     list-style: none;
+   }
+   .card-nota ul {
+     border: 1px solid #bbb;
+     border-radius: 40px;
+     padding: 2.2rem 0;
+     margin: auto;
+   }
+   .card-nota ul li {
+     float: left;
+     margin-left: 1.5rem;
+     margin-top: -10px;
+   }
+   @media(max-width: 768px){
+     .card-nota ul {
+       width: 98%;
+     }
+     .card-nota ul li {
+       margin-left: 0.8rem;
+     }
+   }
+   .card-nota  ul a {
+     text-decoration: none;
+     color: #444;
+     font-size: 18px;
+   }
+   .card-nota  ul a:hover {
+     color: #222;
+     font-weight: 500;
+   }
+   .card-nota  ul li:last-child a {
+     font-weight: 500;
+     background-color: #fee888;
+     color: #fff;
+     border-radius: 50%;
+     padding: 1rem;
+     margin-top: -10px;
+     float: right;
+   }
+
+/*SEÇÂO TABELAS INICIO*/
+    .tabela .container {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 200px;/**TEMP**/
+    }
+    .tabela a {
+      text-decoration: none;
+      color: #222;
+    }
+    .tabela a:hover {
+      font-weight: 400;
+    }
+    .titulo-tabela {
+      border-right: 1px solid #ccc;
+      height: 100px;
+      margin-bottom: 2rem;
+    }
+    .tabela .titulo-tabela h1, h2, h3, h4 {
+      font-family: "Roboto Slab", serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .tabela .actived h4{
+      font-weight: 400;
+    }
+    .tabela .actived::after {
+      content:"";
+      background: #444;
+      display: block;
+      width: 60%;
+      height: 1px;
+      margin: auto;
+    }
+    .tabela #dados {
+    }
+    .tabela #dados #topo-tabela {
+      background-color: #222;
+      color: #fff;
+    }
+    .tabela #dados #topo-tabela th {
+      font-family: "Roboto Slab", serif;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+    }
+    /*borda difere carros*/
+    .tabela #dados #carro1::after {
+      content: "";
+      width: 80%;
+      height: 6px;
+      display:block;
+      background-color: #2288ff;
+      border-radius: 20px;
+      margin: auto;
+    }
+    .tabela #dados #carro2::after {
+      content: "";
+      width: 80%;
+      height: 6px;
+      display:block;
+      background-color: #ff8844;
+      border-radius: 20px;
+      margin: auto;
+    }
+    .tabela #dados #carro3::after {
+      content: "";
+      width: 80%;
+      height: 6px;
+      display:block;
+      background-color: #009966;
+      border-radius: 20px;
+      margin: auto;
+    }
+/*CORPO DA TABELA*/
+
+    .tabela tr td {
+      text-align: center;
+      font-family: "Roboto Slab", serif;
+    }
+    .tabela .categoria {
+      text-align: left;
+      font-weight: 500;
+      font-family: "Roboto", sans-serif;
+    }
+    .tabela tbody {
+      background-color: #DBE6EC;
+      border-color: #fff;
+      border-radius: 10px;
+    }
+    .tabela tbody:nth-child(even) {
+      background-color: #D3DAE0;
+    }
+
+
+/***SELECIONADOR DE CARROS****/
+
+/**MODAL**/
+       #carrosModal .modal-dialog {
+         max-width: 100%;
+         width: 75%;
+         height: 50%;
+         padding: 0;
+
+         margin: auto;
+         margin-top: 1%;
+       }
+       #carrosModal .modal-dialog .modal-content {
+         height: auto;
+         min-height: 100%;
+         width: 100%;
+         border-radius: 0;
+       }
+
+
+/*SELECIONAR CARROS*/
+        .selecionar { /*TEMp*/
+          margin-top: 4rem;
+        }
+
+       .titulo h2, h3 {
+         font-family: "Roboto", sans-serif;
+        color:#ffaa22;
+        font-weight: 400;
+        /* text-transform: uppercase; */
+      }
+      .titulo {
+        margin-bottom: 8rem;
+      }
+      .busca, .filtro-preco, .carroceria, .marcas, .limpar-busca {
+        margin-bottom: 2rem;
+      }
+      .busca input, .marcas select, .carroceria select {
+        width: 100%;
+        padding: 2rem 1rem;
+      }
+      .limpar-busca a {
+        text-decoration: none;
+        color: #ffaa22;
+        font-family: "Roboto Slab", serif;
+        font-size: 18px;
+        font-weight: 100;
+      }
+      /*range slider filtro preco*/
+      .filtro-preco .slider {
+        -webkit-appearance: none;
+        height: 15px;
+        border-radius: 5px;
+        width: 100%;
+        background-color: #ffaa22;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+      }
+      .filtro-preco .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #ff9911;
+        border-color: #ff9911;
+        cursor: pointer;
+      }
+     .filtro-preco .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #ff9911;
+      border-color: #ff9911;
+      cursor: pointer;
+    }
+
+    /*SELECIONA CARRO*/
+    .carros-selecionar a {
+      text-decoration: none;
+      color: #222;
+    }
+    .carro-selecionar {
+      height:150px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+    }
+    .carro-selecionar:hover {
+      border-color: #ffaa22;
+    }
+    .imagem-carro {
+      /* background: url("carroGol.png") no-repeat; */
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: auto;
+      text-align: center;
+    }
+    .nome-carro {
+      font-family: "Roboto Slab", serif;
+    }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>LISTA TESTE</title>
+    <style>
+
+      #wrap a {
+        text-decoration: none;
+        color: #999;
+        display: block;
+      }
+      #wrap li {
+        list-style-type: none;
+      }
+      .lista {
+        background-color: #fff;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        border-color: #999;
+        border-radius: 4px;
+        text-align: left;
+        width: 150px;
+        position:absolute;
+        top: 1;
+        left: 1;
+        display: none;
+
+      }
+      .lista .lista-item {
+        margin-left: -30px;
+      }
+      .lista .lista-item a:hover {
+        background-color: #eee;
+      }
+      .grupo {
+        color: #444;
+      }
+      .box {
+        display: block;
+        background: url("icon-arrow2.svg") no-repeat;
+        background-size: contain;
+        background-position: right;
+        background-color: #fff;
+        border: 1px solid #222;
+        border-radius: 4px;
+        border-color: #999;
+        width: 150px;
+        height: 20px;
+        text-align: left;
+        margin-top: 50px;
+
+      }
+
+    </style>
+  </head>
+  <body>
+      <div class="container" id="wrap">
+        <div class="row">
+          <div id="dropdown" class="col-md-2">
+            <button class="box" id="box" onclick="droplist('#box', '#lista')"></button>
+            <ul class="lista" id="lista">
+              <li class="lista-item" id="grupo">GRUPO LISTA</li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 1</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 2</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 3</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 4</a></li>
+            </ul>
+          </div>
+          <div id="dropdown2" class="col-md-2">
+            <button class="box" id="box1" onclick="droplist('#box1', '#lista1')"></button>
+            <ul class="lista" id="lista1">
+              <li class="lista-item">GRUPO LISTA</li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 1</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 2</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 3</a></li>
+              <li class="lista-item"><a href="javascript:void(0)">LISTA ITEM 4</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    /****DROPDOWN LIST*****/
+    function droplist(box, lista) {
+      if ($(lista).css("display") == "none") {
+        $(lista).show();
+      }
+      else {
+        $(lista).hide();
+      }
+      var itemLista = $(lista).children('li');
+      $(itemLista).click(function() {
+        $(box).html($(this).clone());
+        $(lista).hide();
+      });
+    }
+
+    /******************/
+  </script>
+  </body>
+</html>
