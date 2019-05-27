@@ -17,7 +17,7 @@
       font-family: "Roboto", sans-serif;
       font-weight: 300;
     }
-    .comparador a {
+    .comparador a, .selecionar a {
       text-decoration: none;
     }
     .titulo-comparador h1, h2, h3, h5 {
@@ -30,10 +30,10 @@
       font-weight: 300;
       color: #444;
     }
-    /* comparador list box padrão*/
-    .comparador .box {
+    /* LISTA BOX PADRÃO */
+    .comparador .box, .selecionar .box {
       display: block;
-      background: url("icon-arrow2.svg") no-repeat;
+      background: url("icon-arrow.svg") no-repeat;
       background-size: contain;
       background-position: right;
       background-color: #fff;
@@ -46,28 +46,39 @@
       padding: 5px;
       color: #222;
     }
-
-    .comparador .lista {
+    .comparador .box .lista-item a, .selecionar .box .lista-item a {
+      border: none !important;
+      padding: 0;
+    }
+    .comparador .box .lista-item a:hover, .selecionar .box .lista-item a:hover {
+      background: transparent;
+    }
+    .comparador .lista, .selecionar .lista {
       z-index: 9999;
-      background-color: #fafafa;
-      border-radius: 4px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       text-align: left;
-      width: 90%;
+      width: 92%;
       position: absolute;
       margin-left: 0;
       padding: 10px;
       display: none;
     }
-    .comparador .lista-item a {
+    .comparador .lista-item a, .selecionar .lista-item a {
       display: block;
       color: #222;
+      font-family: "Roboto Slab" , sans-serif;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 4px;
+      padding-top: 4px;
     }
-    .comparador .lista-item a:hover {
+    .comparador .lista-item a:hover, .selecionar .lista-item a:hover {
       background-color: #ddd;
     }
-    .comparador .grupo-lista {
+    .comparador .grupo-item, .selecionar .grupo-item {
       font-family: "Roboto", sans-serif;
-      font-weight: 500;
+      font-weight: 400;
       color: #111;
     }
 
@@ -279,14 +290,21 @@
       height: 100px;
       margin-bottom: 2rem;
     }
-    .tabela .titulo-tabela h1, h2, h3, h4 {
+    .tabela .titulo-tabela h4 {
+      text-align: center;
+
+    }
+    .tabela .titulo-tabela a {
       font-family: "Roboto Slab", serif;
       font-weight: 400;
+      color: #666;
       text-transform: uppercase;
-      text-align: center;
     }
-    .tabela .actived h4{
-      font-weight: 400;
+    .tabela .titulo-tabela a:hover {
+      color: #222;
+    }
+    .tabela .actived  a {
+      color: #222;
     }
     .tabela .actived::after {
       content:"";
@@ -394,9 +412,9 @@
       .busca, .filtro-preco, .carroceria, .marcas, .limpar-busca {
         margin-bottom: 2rem;
       }
-      .busca input, .marcas select, .carroceria select {
+      .busca input {
         width: 100%;
-        padding: 2rem 1rem;
+        height: 30px;
       }
       .limpar-busca a {
         text-decoration: none;

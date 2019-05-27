@@ -44,9 +44,9 @@
               </div>
               <div class="card-versao col-md-12">
                 <div class="versao">
-                  <button class="box" id="card-box1" onclick="droplist('#card-box1', '#card-lista1')"></button>
+                  <button class="box" id="card-box1" onclick="droplist('#card-box1', '#card-lista1')">HATCH 2.0</button>
                   <ul class="lista" id="card-lista1">
-                    <li class="lista-item grupo-lista">modelo versão</li>
+                    <li class="lista-item grupo-item">selecione uma versão</li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 1</a></li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 2</a></li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 3</a></li>
@@ -114,9 +114,9 @@
               </div>
               <div class="card-versao col-md-12">
                 <div class="versao">
-                  <button class="box" id="card-box2" onclick="droplist('#card-box2', '#card-lista2')"></button>
+                  <button class="box" id="card-box2" onclick="droplist('#card-box2', '#card-lista2')"> HATCH 1.0</button>
                   <ul class="lista" id="card-lista2">
-                    <li class="lista-item grupo-lista">modelo versão</li>
+                    <li class="lista-item grupo-item">selecione uma versão</li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 1</a></li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 2</a></li>
                     <li class="lista-item"><a href="javascript:void(0)">modelo 3</a></li>
@@ -185,7 +185,7 @@
               <div class="card-versao col-md-12">
                 <button class="box" id="card-box3" onclick="droplist('#card-box3', '#card-lista3')"></button>
                 <ul class="lista">
-                  <li class="lista-item grupo-item">modelo versão</li>
+                  <li class="lista-item grupo-item">selecione uma versão</li>
                   <li class="lista-item"><a href="javascript:void(0)">modelo 1</a></li>
                   <li class="lista-item"><a href="javascript:void(0)">modelo 2</a></li>
                   <li class="lista-item"><a href="javascript:void(0)">modelo 3</a></li>
@@ -267,9 +267,9 @@
               <thead class="" id="topo-tabela">
                 <tr>
                   <th></th>
-                  <th id="carro1">CARRO 1</th>
-                  <th id="carro2">CARRO 2</th>
-                  <th id="carro3">CARRO 3</th>
+                  <th class="col-md-4" id="carro1">WOLKSVAGEM GOL</th>
+                  <th class="col-md-4" id="carro2">FIAT PALIO</th>
+                  <th class="col-md-4" id="carro3">-</th>
                 </tr>
               </thead>
               <tbody>
@@ -454,6 +454,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="functions.js"></script>
     <script>
       $(".card-carro").hover(function(){
         $(".card-carro").removeClass("dismiss");
@@ -463,21 +464,6 @@
       //   $(".notas").hide();
       //   $(".nota-range").show();
       // });
-      /****DROPDOWN LIST*****/
-      function droplist(box, lista) {
-        if ($(lista).css("display") == "none") {
-          $(lista).show();
-        }
-        else {
-          $(lista).hide();
-        }
-        var itemLista = $(lista).children('li');
-        $(itemLista).click(function() {
-          $(box).html($(this).clone());
-          $(lista).hide();
-        });
-      }
-      /******************/
     </script>
   </body>
 </html>

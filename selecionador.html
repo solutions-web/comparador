@@ -37,30 +37,28 @@
                     <input class="slider" type="range" name="" value="">
                   </div>
                   <div class="carroceria col-md-12">
-                    <select class="dropdown" name="carroceria-dropdown">
-                      <optgroup label="carroceria">
-                      <option value="">cupe</option>
-                      <option value="">conversivel</option>
-                      <option value="">picape</option>
-                      <option value="">perua</option>
-                      <option value="">suv</option>
-                      <option value="">seda</option>
-                      <option value="">hatch</option>
-                    </optgroup>
-                    </select>
+                      <button class="box" id="carroceria-box" onclick="droplist('#carroceria-box', '#carroceria-lista')"></button>
+                      <ul class="lista" id="carroceria-lista">
+                        <li class="lista-item"><a href="javascript:void(0)">cupe</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">conversivel</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">picape</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">perua</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">suv</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">seda</a></li>
+                        <li class="lista-item"><a href="javascript:void(0)">hatch</a></li>
+                      </ul>
                   </div>
                   <div class="marcas col-md-12">
-                    <select class="dropdown" name="marcas-dropdown">
-                      <optgroup label="marcas">
-                      <option value="">cupe</option>
-                      <option value="">conversivel</option>
-                      <option value="">picape</option>
-                      <option value="">perua</option>
-                      <option value="">suv</option>
-                      <option value="">seda</option>
-                      <option value="">hatch</option>
-                    </optgroup>
-                    </select>
+                    <button class="box" id="marcas-box" onclick="droplist('#marcas-box', '#marcas-lista')"></button>
+                    <ul class="lista" id="marcas-lista">
+                      <li class="lista-item"><a href="javascript:void(0)">cupe</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">conversivel</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">picape</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">perua</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">suv</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">seda</a></li>
+                      <li class="lista-item"><a href="javascript:void(0)">hatch</a></li>
+                    </ul>
                 </div>
                 <div class="limpar-busca col-md-12">
                   <a href="">limpar busca</a>
@@ -178,6 +176,9 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="functions.js"></script>
+
+
         <script>
           $(document).ready(function(){
             $("#carrosModal").show();
